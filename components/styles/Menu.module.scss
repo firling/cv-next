@@ -1,0 +1,39 @@
+.menu{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+    &__elt {
+        list-style: none;
+        display: inline-block;
+
+        & a {
+            text-decoration: none;
+            position: relative;
+            color: #313131;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: sans-serif;
+            display: block;
+            overflow: hidden;
+            transition: 0.7s all;
+            padding: 14px 15px;
+            text-transform: uppercase;
+
+            &:before {
+                content: '';
+                width: 40px;
+                position: absolute;
+                border-bottom: 4px solid #313131;
+                bottom: 0;
+                right: 350px;
+                transition: 0.7s all;
+            }
+            &:hover::before, &.active::before {
+                right: 0;
+            }
+        }
+    }
+}
+  
+  
